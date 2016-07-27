@@ -63,7 +63,7 @@ namespace EasyPay
                     Height = 300,
                     Width = 300
                 },
-                Renderer = new ZXing.Rendering.PixelDataRenderer() { Foreground = Colors.Black }//Adding color QR code   
+                Renderer = new ZXing.Rendering.PixelDataRenderer() { Foreground = Colors.Black,Background = Colors.LightBlue }//Adding color QR code   
             };
             var result = writer.Write(txtPhoneNo.Text);
             var wb = result.ToBitmap() as WriteableBitmap;
@@ -78,10 +78,7 @@ namespace EasyPay
         private void txtPhoneNo_LostFocus(object sender, RoutedEventArgs e)
         {
             Window.Current.CoreWindow.CharacterReceived -= inputEntered;
-        }
-
-
-       
+        }       
 
         // here we recieve the character and decide to accept it or not.
         private void inputEntered(CoreWindow sender, CharacterReceivedEventArgs args)
