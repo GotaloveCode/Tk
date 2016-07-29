@@ -45,8 +45,13 @@ namespace EasyPay
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (localSettings.Values["PhoneNo"]!=null)
-            txtPhoneNo.Text = localSettings.Values["PhoneNo"].ToString();
+            if (localSettings.Values["PhoneNo"] != null)
+            {
+                txtPhoneNo.Text = localSettings.Values["PhoneNo"].ToString();
+                btnGenerateCode.IsEnabled = true;
+            }
+           
+
         }
 
 

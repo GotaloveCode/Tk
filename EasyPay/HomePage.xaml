@@ -15,17 +15,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid Background="#7d8491">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Image Source="Assets/smartphone .png" Height="100" Margin="60,10,0,15" Grid.RowSpan="2"/>
-            <TextBlock Text="EAZZy" Grid.Column="1" FontFamily="Agency FB" FontSize="36" VerticalAlignment="Bottom"/>
-            <TextBlock Text="Pay" Grid.Column="1" Grid.Row="1" FontFamily="Agency FB" FontSize="36" VerticalAlignment="Top"/>
+            <Image Source="Assets/eazzy pay.png" Height="100" Margin="60,10,0,10" HorizontalAlignment="Left"/>  
         </Grid>
         <StackPanel Grid.Row="1" Background="#ccdad1" >
             <TextBlock  Text="Enter Number" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
