@@ -1,44 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="c0af69ea-0363-4bc4-9bf0-3d80e38eeb13"
-            Publisher="CN=marti"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="c0af69ea-0363-4bc4-9bf0-3d80e38eeb13" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="37455MPFusion.TekeTeke" Publisher="CN=E664CD61-4AFB-4722-88DF-BBB47A27B492" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="325f2043-2c65-41d8-9535-5c0b4c7f4dc7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>EasyPay</DisplayName>
-    <PublisherDisplayName>marti</PublisherDisplayName>
+    <DisplayName>Teke Teke</DisplayName>
+    <PublisherDisplayName>MP Fusion</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="EasyPay.App">
-        <m3:VisualElements
-            DisplayName="EasyPay"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
-            Description="EasyPay"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="EazzyPay.App">
+      <m3:VisualElements DisplayName="Teke Teke" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Eazzy Pay allows you to generate your phone number as a QR code" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <m3:ShowNameOnTiles>
+            <m3:ShowOn Tile="square150x150Logo" />
+          </m3:ShowNameOnTiles>
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClientServer" />
+    <Capability Name="picturesLibrary" />
   </Capabilities>
 </Package>
