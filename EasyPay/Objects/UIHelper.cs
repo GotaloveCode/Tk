@@ -24,9 +24,9 @@ namespace EasyPay
             }
         }
 
-        public static async Task ShowAlert(string message)
+        public static async Task ShowAlert(string message, string title = "")
         {
-            MessageDialog dialog = new MessageDialog(message);
+            MessageDialog dialog = new MessageDialog(message, title);
             await dialog.ShowAsync();
         }
     }

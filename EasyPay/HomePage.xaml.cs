@@ -11,6 +11,7 @@ using Windows.Data.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Imaging;
+using Windows.Networking.Connectivity;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Core;
@@ -158,7 +159,7 @@ namespace EasyPay
             }
             else
             {
-                btnVerify.IsEnabled = true;
+                btnVerify.IsEnabled = false;
             }
             if (!txtPhoneNo.Text.StartsWith("254"))
             {
@@ -210,14 +211,23 @@ namespace EasyPay
 
         private async void btnVerify_Click(object sender, RoutedEventArgs e)
         {
-            if (txtPhoneNo.Text.Length != 12 || !IsDigitsOnly(txtPhoneNo.Text))
+            if (NetworkInformation.GetInternetConnectionProfile() == null)
             {
-                await UIHelper.ShowAlert("Invalid Phone number");
+                //no internet
+                await UIHelper.ShowAlert("Check your internet connection", "No internet connectivity");
             }
             else
             {
-                await PostAsync();
+                if (txtPhoneNo.Text.Length != 12 || !IsDigitsOnly(txtPhoneNo.Text))
+                {
+                    await UIHelper.ShowAlert("Phone number format should be 254712345678", "Invalid phone number");
+                }
+                else
+                {
+                    await PostAsync();
+                }
             }
+            
                 
         }
 
@@ -244,9 +254,10 @@ namespace EasyPay
 
             // load it up...
             var outputJson = await response.Content.ReadAsStringAsync();
+            JObject output = JObject.Parse(outputJson);
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                JObject output = JObject.Parse(outputJson);
+                
                 String status = (string)output["status"];
                 if (status != "error")
                 {                    
@@ -260,7 +271,12 @@ namespace EasyPay
                     string error = (string)output["error"]["code"];
                     await UIHelper.ShowAlert(error);
                 }
-               
+
+            }
+            else
+            {
+                string error = (string)output["error"]["message"][0];
+                await UIHelper.ShowAlert(error);
             }
             UIHelper.ToggleProgressBar(false);
 
