@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 
-namespace EasyPay
+namespace TekeTeke
 {
     public static class UIHelper
     {

@@ -358,15 +358,16 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>37455MPFusion.TekeTeke</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.373098DE03868</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Teke Teke</ReservedName>
+      <ReservedName>TekeTeke</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
-    <MainPackageIdentityName>37455MPFusion.EazzyPay</MainPackageIdentityName>
     <MainPackageIdentityName>37455MPFusion.QuicKE</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.TekeTeke</MainPackageIdentityName>
     <MainPackageIdentityName>37455MPFusion.TekeTekeBusiness</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.TekeTekePremium</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windows.com/dashboard/Application?appId=9NBLGGH4TVVN" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NBLGGH512NZ" />
 </StoreAssociation>

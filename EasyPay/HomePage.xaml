@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="EasyPay.HomePage"
+    x:Class="TekeTeke.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:EasyPay"
+    xmlns:local="using:TekeTeke"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -19,7 +19,7 @@
         </Grid>
         <StackPanel Grid.Row="1" Background="#ccdad1" >
             <TextBlock  Text="Enter Number" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>            
-            <TextBox x:Name="txtPhoneNo" PlaceholderText="2547..." Foreground="Black" HorizontalAlignment="Center" Width="250" Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,1" MaxLength="12" InputScope="TelephoneNumber" GotFocus="txtPhoneNo_GotFocus" LostFocus="txtPhoneNo_LostFocus" KeyDown="txtPhoneNo_KeyDown" TextChanged="txtPhoneNo_TextChanged" Text="2547"/>
+            <TextBox x:Name="txtPhoneNo" PlaceholderText="254..." Foreground="Black" HorizontalAlignment="Center" Width="250" Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,1" MaxLength="12" InputScope="TelephoneNumber" GotFocus="txtPhoneNo_GotFocus" LostFocus="txtPhoneNo_LostFocus" KeyDown="txtPhoneNo_KeyDown" TextChanged="txtPhoneNo_TextChanged" Text="254"/>
             <Button x:Name="btnVerify" Content="Verify" Background="#63adf2" HorizontalAlignment="Stretch" Margin="20,20,20,10" Click="btnVerify_Click" IsEnabled="False"/>
             <TextBox x:Name="txtVerify" PlaceholderText="Enter code..." Foreground="Black" HorizontalAlignment="Center" Width="250" Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,1" TextChanged="txtVerify_TextChanged"/>
             <Button x:Name="btnGenerateCode" Content="GENERATE CODE" Background="#63adf2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,0" BorderBrush="#FF63ADF2" BorderThickness="2.5,5" Click="btnGenerateCode_Click" IsEnabled="False"/>

@@ -1,41 +1,31 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Data.Json;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Graphics.Imaging;
 using Windows.Networking.Connectivity;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Core;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using ZXing;
 
 
 
-namespace EasyPay
+namespace TekeTeke
 {
 
     public sealed partial class HomePage : Page
     {
-        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+       ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
-        List<PhoneQRs> QrList = new List<PhoneQRs>();
         public string Code { get; set; }
 
         // temporary variable for holding the latest textBox value before the textChange event is trigerred
@@ -211,23 +201,16 @@ namespace EasyPay
 
         private async void btnVerify_Click(object sender, RoutedEventArgs e)
         {
-            if (NetworkInformation.GetInternetConnectionProfile() == null)
-            {
-                //no internet
+            //no internet
+            if (NetworkInformation.GetInternetConnectionProfile() == null)                
                 await UIHelper.ShowAlert("Check your internet connection", "No internet connectivity");
-            }
-            else
+             else
             {
-                if (txtPhoneNo.Text.Length != 12 || !IsDigitsOnly(txtPhoneNo.Text))
-                {
+                if (txtPhoneNo.Text.Length != 12 || !IsDigitsOnly(txtPhoneNo.Text))                
                     await UIHelper.ShowAlert("Phone number format should be 254712345678", "Invalid phone number");
-                }
                 else
-                {
-                    await PostAsync();
-                }
-            }
-            
+                    await PostAsync();                
+            }          
                 
         }
 
