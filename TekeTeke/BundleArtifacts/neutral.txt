@@ -1,0 +1,5 @@
+MainPackage=C:\Users\marti\Documents\Visual Studio 2015\Projects\TekeTeke\TekeTeke\bin\Release\TekeTeke_1.1.0.2_AnyCPU.appx
+SymbolPackage=C:\Users\marti\Documents\Visual Studio 2015\Projects\TekeTeke\TekeTeke\AppPackages\TekeTeke_1.1.0.2_Test\TekeTeke_1.1.0.2_AnyCPU.appxsym
+ResourcePack=C:\Users\marti\Documents\Visual Studio 2015\Projects\TekeTeke\TekeTeke\bin\Release\TekeTeke_1.1.0.2_language-fr.appx
+ResourcePack=C:\Users\marti\Documents\Visual Studio 2015\Projects\TekeTeke\TekeTeke\bin\Release\TekeTeke_1.1.0.2_scale-100.appx
+ResourcePack=C:\Users\marti\Documents\Visual Studio 2015\Projects\TekeTeke\TekeTeke\bin\Release\TekeTeke_1.1.0.2_scale-140.appx
