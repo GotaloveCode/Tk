@@ -117,16 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="EnterCode.PlaceholderText" xml:space="preserve">
-    <value>Entrer le code  ...</value>
+  <data name="btnSignUp.Content" xml:space="preserve">
+    <value>Créer un compte</value>
   </data>
-  <data name="Generate.Content" xml:space="preserve">
-    <value>Générer</value>
+  <data name="btnVerify.Content" xml:space="preserve">
+    <value>Vérifier</value>
   </data>
-  <data name="Mobile.Text" xml:space="preserve">
-    <value>N° de téléphone portable</value>
+  <data name="EnterReceived" xml:space="preserve">
+    <value>Entrer le code reçu</value>
   </data>
-  <data name="VerifyCode.Content" xml:space="preserve">
-    <value>Vérification du code</value>
+  <data name="InvalidCode" xml:space="preserve">
+    <value>Code invalide</value>
+  </data>
+  <data name="InvalidPhone" xml:space="preserve">
+    <value>Numéro de téléphone invalide.</value>
+  </data>
+  <data name="NoInternet" xml:space="preserve">
+    <value>Pas de connectivité internet</value>
+  </data>
+  <data name="RequiredName" xml:space="preserve">
+    <value>Entrer Nom</value>
+  </data>
+  <data name="txtName.PlaceholderText" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="txtPhoneNo.PlaceholderText" xml:space="preserve">
+    <value>254 | Numéro de téléphone</value>
+  </data>
+  <data name="txtVerify.PlaceholderText" xml:space="preserve">
+    <value>Code de vérification</value>
   </data>
 </root>

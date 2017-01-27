@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Windows.Networking.Connectivity;
 using Windows.UI.Popups;
 
 namespace TekeTeke
 {
     public static class UIHelper
     {
-        public static async void ToggleProgressBar(bool toggle, string message = "")
+        public static async Task ToggleProgressBar(bool toggle, string message = "")
         {
             var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
 
@@ -28,6 +26,12 @@ namespace TekeTeke
         {
             MessageDialog dialog = new MessageDialog(message, title);
             await dialog.ShowAsync();
+        }
+
+        public static bool HasInternetConnection()
+        {
+            ConnectionProfile connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            return (connectionProfile != null && connectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess);
         }
     }
 }

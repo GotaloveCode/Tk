@@ -23,7 +23,7 @@
             <m3:ShowOn Tile="square150x150Logo" />
           </m3:ShowNameOnTiles>
         </m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:SplashScreen Image="Assets\SplashScreen.jpg" />
       </m3:VisualElements>
     </Application>
   </Applications>

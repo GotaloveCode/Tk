@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -91,10 +92,17 @@ namespace TekeTeke
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(HomePage), e.Arguments))
+                if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Phone"))
                 {
-                    throw new Exception("Failed to create initial page");
+                    if (!rootFrame.Navigate(typeof(HomePage), e.Arguments))
+                        throw new Exception("Failed to create initial page");
                 }
+                else
+                {
+                    if (!rootFrame.Navigate(typeof(SignUpPage), e.Arguments))
+                        throw new Exception("Failed to create initial page");
+                }
+               
             }
 
             // Ensure the current window is active
