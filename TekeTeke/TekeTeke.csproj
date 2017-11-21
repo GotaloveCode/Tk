@@ -91,9 +91,6 @@
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CreatePage.xaml.cs">
-      <DependentUpon>CreatePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -142,10 +139,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="SignUpPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CreatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

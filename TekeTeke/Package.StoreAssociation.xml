@@ -364,7 +364,11 @@
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
+    <MainPackageIdentityName>37455MPFusion.Pesalink</MainPackageIdentityName>
     <MainPackageIdentityName>37455MPFusion.QuicKE</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.SmartCash</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.SmartCashMerchant</MainPackageIdentityName>
+    <MainPackageIdentityName>37455MPFusion.Taradi</MainPackageIdentityName>
     <MainPackageIdentityName>37455MPFusion.2693225B01B3</MainPackageIdentityName>
     <MainPackageIdentityName>37455MPFusion.TekeTekePremium</MainPackageIdentityName>
   </AccountPackageIdentityNames>
@@ -372,7 +376,22 @@
     <PackageInfo>
       <OsMinVersion>6.3.1.0</OsMinVersion>
       <PackageArchitecture>Neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>1.1.0.2</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.3.1.0</OsMinVersion>
+      <PackageArchitecture>Neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.2</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.3.1.0</OsMinVersion>
+      <PackageArchitecture>Neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.2</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.3.1.0</OsMinVersion>
+      <PackageArchitecture>Neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.2</PackageMaxArchitectureVersion>
     </PackageInfo>
   </PackageInfoList>
 </StoreAssociation>

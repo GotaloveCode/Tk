@@ -16,13 +16,13 @@
             </Grid.RowDefinitions>
             <StackPanel Background="#225689" Orientation="Horizontal">
                 <AppBarButton Icon="AllApps"/>
-                <TextBlock Text="Scan QR" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
+                <TextBlock Text="Scan QR" x:Uid="ScanQr" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
             </StackPanel>
             <Grid Grid.Row="1" >
                 <Grid.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/bg2.jpg"/>
                 </Grid.Background>
-                <Image Grid.Row="1" x:Name="QRCode" Width="280" Height="280" Margin="0"/>
+                <Image Grid.Row="1" x:Name="QRCode" Width="250" Height="250" Margin="20,0,0,0" HorizontalAlignment="Left"/>
             </Grid>
 
 

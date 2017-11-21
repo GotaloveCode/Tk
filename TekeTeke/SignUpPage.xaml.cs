@@ -152,11 +152,13 @@ namespace TekeTeke
             ErrorBucket errors = new ErrorBucket();
             ValidateSignUp(errors);
             if (!(errors.HasErrors))
+            {
                 localSettings.Values["Phone"] = txtPhoneNo.Text;
-            Frame rf = new Frame();
-            rf.Navigate(typeof(HomePage));
-            // errors?
-            if (errors.HasErrors)
+                //Frame rootFrame = Window.Current.Content as Frame;
+                //rootFrame = new Frame();
+                this.Frame.Navigate(typeof(HomePage), txtPhoneNo.Text);
+            }
+            else
             {
                 await UIHelper.ShowAlert(errors.GetErrorsAsString());
                 errors.ClearErrors();
@@ -166,15 +168,13 @@ namespace TekeTeke
         //validate register
         private void ValidateSignUp(ErrorBucket errors)
         {
-            if (string.IsNullOrEmpty(txtName.Text))
-                errors.AddError(res.GetString("RequiredName"));
-
+         
             if (string.IsNullOrEmpty(txtPhoneNo.Text) || txtPhoneNo.Text.Length < 12)
                 errors.AddError(res.GetString("InvalidPhone"));
 
             if (string.IsNullOrEmpty(txtVerify.Text))
                 errors.AddError(res.GetString("EnterReceived"));
-            Code = "1234";
+            
             if (!string.IsNullOrEmpty(txtVerify.Text) && txtVerify.Text !=Code)
                 errors.AddError(res.GetString("InvalidCode"));
 

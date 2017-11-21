@@ -147,4 +147,10 @@
   <data name="txtVerify.PlaceholderText" xml:space="preserve">
     <value>Code de vérification</value>
   </data>
+  <data name="CreateAccount.Text" xml:space="preserve">
+    <value>Créer un compte</value>
+  </data>
+  <data name="ScanQr.Text" xml:space="preserve">
+    <value>Scanner le QR</value>
+  </data>
 </root>

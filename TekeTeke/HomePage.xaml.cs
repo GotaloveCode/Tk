@@ -22,16 +22,17 @@ namespace TekeTeke
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (localSettings.Values["Phone"] != null)
+            if (localSettings.Values.ContainsKey("Phone"))
             {
                 IBarcodeWriter writer = new BarcodeWriter
                 {
                     Format = BarcodeFormat.QR_CODE,//Mentioning type of bar code generation   
-                    Options = new ZXing.Common.EncodingOptions{ Height = 280,Width = 280},
+                    Options = new ZXing.Common.EncodingOptions{ Height = 250,Width = 250},
                     Renderer = new ZXing.Rendering.PixelDataRenderer() { Foreground = Colors.Black, Background = Colors.Transparent }//Adding color QR code   
                 };
                 var result = writer.Write(localSettings.Values["Phone"].ToString());
                 var wb = result.ToBitmap() as WriteableBitmap;
+                
                 //Displaying QRCode Image   
                 QRCode.Source = wb;
             }
